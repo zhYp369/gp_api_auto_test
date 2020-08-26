@@ -68,7 +68,9 @@ def jiexi_json(json_data, key):
     a = key.split(".")
     value = json_data
     for i in a:
-        value = value[i]
+        value = value.get(i, "null")
+        if value == "null":
+            break
     return value
 
 
