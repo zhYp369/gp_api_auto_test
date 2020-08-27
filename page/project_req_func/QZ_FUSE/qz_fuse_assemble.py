@@ -43,16 +43,16 @@ def get_test_data(all_test_data):
         api_alltest_dict["cookie"] = api_config_data.get("cookie")                       # 接口请求cookie
         api_alltest_dict["tonken"] = api_config_data.get("tonken")                       # 接口请求tonken
         api_alltest_dict["method"] = test_case.get("method")                             # 接口请求方式
-        api_alltest_dict["header"] = get_api_header(test_case)                           # 接口请求header
+        api_alltest_dict["header"] = get_header(api_config_data, test_case)              # 接口请求header
         api_alltest_dict["interfaceCode"] = api_config_data.get("interfaceCode")         # 接口请求方法名称
         api_alltest_dict["global_data"] = updata_req_data(get_api_global(api_config_data, test_data_file_dir))         # 接口请求公共报文路径
-        api_alltest_dict["data"] = updata_req_data(get_api_data(test_case, test_data_file_dir))       # 接口请求data
+        api_alltest_dict["data"] = updata_req_data(get_api_data(test_case, test_data_file_dir))         # 接口请求data
         api_alltest_dict["expected"] = test_case.get("Expected_results")                 # 接口请求预期结果
         api_alltest_dict["test_discribe"] = test_case.get("test_discribe")               # 用例描述
         api_alltest_dict["other_data"] = project_config.get("other_data")                # 用例其他请求数据
-        api_alltest_dict["Be_dependent"] = test_case.get("Be_dependent")                 # 获取是否有被依赖
-        api_alltest_dict["dependent"] = test_case.get("dependent")                       # 获取是否有依赖
-        api_alltest_dict["dependent_case_id"] = test_case.get("dependent_case_id")       # 获取依赖的测试用例id
+        api_alltest_dict["Be_dependent_fields"] = test_case.get("Be_dependent_fields")   # 被依赖的数据
+        api_alltest_dict["d_case_id"] = test_case.get("d_case_id")                       # 依赖的测试用例
+        api_alltest_dict["dependent_fields"] = test_case.get("dependent_fields")         # 依赖的数据
         api_alltest_dict["is_run"] = test_case.get("is_run")                             # 用例是否执行
         if api_alltest_dict["is_run"] == "yes":
             api_alltests_list.append(api_alltest_dict)

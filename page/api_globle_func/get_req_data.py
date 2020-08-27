@@ -58,8 +58,21 @@ def get_api_hp(api_config_data, project_config):
     return host_prot
 
 
-def get_api_header(test_case):
+def get_api_header(api_config_data):
+    header = json.loads(s=api_config_data.get("api_header"))
+    return header
+
+
+def get_case_header(test_case):
     header = json.loads(s=test_case.get("api_header"))
+    return header
+
+
+def get_header(api_config_data, test_case):
+    if test_case.get("api_header"):
+        header = get_case_header(test_case)
+    else:
+        header = get_api_header(api_config_data)
     return header
 
 

@@ -20,15 +20,12 @@ from page.project_req_func.QZ_FUSE.qz_fuse_assert import assert_result_in
 test_data_dict = get_testData_expected_title()
 
 
-@allure.feature("中文天地项目接口测试")
-@allure.story("订单上传接口")
+@allure.feature("发票通项目")
+@allure.story("融合前置接口测试")
 @allure.title("{title}")
 @pytest.mark.parametrize('testdata, expected, title', test_data_dict)
 @pytest.mark.A
 def test_timestamp(testdata, expected, title):
-    """
-    用例描述：测试不同的timestamp和target
-    """
     # 根据接口信息选择对应的接口请求方法
     respon = rhqz_req(testdata)
     # allure.attach(respon)
