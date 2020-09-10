@@ -16,7 +16,7 @@ from util.data_type_data.edit_json import json_to_dict, dict_to_json
 from util.encryption.aes.AES_ECB_pkcs5padding import Aes_ECB
 from util.data_type_data.edit_json import inster_new_json
 from util.num.get_random import get_random_num
-from util.num.get_time import get_time
+from util.num.edit_time import get_time
 
 
 

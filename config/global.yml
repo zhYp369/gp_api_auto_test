@@ -1,5 +1,16 @@
-data_path: F:\woniu\work\Auto\api_auto\gp_auto_api_test_data
-project_name: qz_fuse
+data_path: F:\woniu\work\Auto\api_auto\gp_auto_api_test_data\
+src_path: F:\woniu\work\Auto\api_auto\gp_api_auto_test
+result_path: F:\woniu\work\Auto\api_auto\gp_api_auto_test\result
+report_path: F:\woniu\work\Auto\api_auto\gp_api_auto_test\resport
+python_env: auto_api_test
+
+
+
+#data_path: /opt/var/app/auto/api_auto/gp_auto_api_test_data/
+#src_path: /opt/var/app/auto/api_auto/gp_api_auto_test/
+#result_path: /opt/var/app/auto/api_auto/result/
+#report_path: /opt/var/app/auto/api_auto/report/
+#python_env: gp_api_test
 
 
 

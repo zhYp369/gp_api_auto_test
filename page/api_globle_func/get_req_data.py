@@ -52,9 +52,8 @@ def get_api_config(api_id, api_config_list):
     return api_config_dict
 
 
-def get_api_hp(api_config_data, project_config):
-    engineering = api_config_data.get("api_engineering")
-    host_prot = project_config.get("engineering_hp").get(engineering)
+def get_api_hp(project_config):
+    host_prot = project_config.get("hp")
     return host_prot
 
 

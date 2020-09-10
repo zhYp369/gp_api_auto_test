@@ -32,7 +32,7 @@ def get_test_data(all_test_data):
         # 获取接口的配置数据
         api_config_data = get_api_config(api_id, api_config)
         # 根据接口配置数据的工程名称，获取对应工程的请求ip和端口，并组装完整接口地址
-        url = get_api_hp(api_config_data, project_config) + api_config_data.get("api_url")
+        url = get_api_hp(project_config) + api_config_data.get("api_url")
         # 组装接口信息字典返回
         api_alltest_dict["case_id"] = test_case.get("case_id")                           # 测试用例id
         api_alltest_dict["api_id"] = test_case.get("api_id")                             # 接口id
@@ -72,8 +72,8 @@ def assemble_testdata_expected_title(all_runtest_encryption_data):
     return case_datas
 
 
-def get_testData_expected_title():
-    all_test_data = get_project_test_data()
+def get_testData_expected_title(gc_path):
+    all_test_data = get_project_test_data(gc_path)
     # 获取所有用例测试数据
     api_alltests_list = get_test_data(all_test_data)
     # 组装testcase, title, expected

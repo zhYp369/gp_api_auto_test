@@ -17,7 +17,8 @@ from page.project_req_func.QZ_FUSE.qz_fuse_assert import assert_result_in
 
 
 # 获取相关数据文件的数据，项目配置文件数据，接口基本信息数据，测试用例数据
-test_data_dict = get_testData_expected_title()
+gc_path_data = "fpt/fpt-rhqz"
+test_data_dict = get_testData_expected_title(gc_path_data)
 
 
 @allure.feature("发票通项目")
