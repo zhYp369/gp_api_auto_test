@@ -6,7 +6,7 @@
 @project: apiAutoTest
 @file: api_req
 @time: 2020/6/5 13:25
-@desc: 
+@desc: 封装api请求方法
 """
 
 import requests
@@ -14,7 +14,7 @@ import requests
 
 def req_http(method, url, kwargs):
     """
-
+    http api接口请求方法
     :param method:
     :param url:
     :param kwargs: {headers=headers, data=payload, files= "", json="", params="", timeout=3000, verify=False}

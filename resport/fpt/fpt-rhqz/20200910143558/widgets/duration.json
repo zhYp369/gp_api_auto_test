@@ -1,0 +1,21 @@
+[ {
+  "uid" : "52977cd0ab88fb69",
+  "name" : "kj_b_01@蓝票_一行明细",
+  "time" : {
+    "start" : 1599719760183,
+    "stop" : 1599719760333,
+    "duration" : 150
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2145810e28d76cd9",
+  "name" : "kj_r_02@红票_一行明细",
+  "time" : {
+    "start" : 1599719760342,
+    "stop" : 1599719760498,
+    "duration" : 156
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

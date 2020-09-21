@@ -15,3 +15,5 @@ import time
 def get_time(time_type="%Y%m%d%H%M%S"):
     now_time = time.strftime(time_type, time.localtime())
     return now_time
+
+

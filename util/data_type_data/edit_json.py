@@ -11,11 +11,12 @@
 
 
 import json
+from util.edit_system.edit_path import check_and_creat_dir
 
 
 # 字典转换json
 def dict_to_json(dict_data):
-    json_data = json.dumps(dict_data)
+    json_data = json.dumps(dict_data, ensure_ascii=False)
     return json_data
 
 
@@ -42,6 +43,7 @@ def json_to_obj(json_data, cls):
 
 # dict转换json的文件
 def dict_to_json_write_file(json_file, dict_data):
+    check_and_creat_dir(json_file)
     with open(json_file, 'w') as f:
         json.dump(dict_data, f)
 

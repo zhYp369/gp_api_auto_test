@@ -11,13 +11,17 @@
 import allure
 import pytest
 
-from page.project_req_func.ZWCM.assemble_req_data import get_testData_expected_title
+from page.api_globle_func.assemble_case_information import get_testData_expected_title
 from page.project_req_func.ZWCM.zwcm_req_funcs import globle_req
 from page.project_req_func.ZWCM.assert_result import assert_result_in
 
 
+projectN = "ZWCM"
+gcN = "fpsyy-interface"
+
+
 # 获取相关数据文件的数据，项目配置文件数据，接口基本信息数据，测试用例数据
-test_data_dict = get_testData_expected_title()
+test_data_dict = get_testData_expected_title(projectN, gcN)
 
 
 @allure.feature("中文天地项目接口测试")

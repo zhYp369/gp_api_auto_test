@@ -21,3 +21,10 @@ class YamlReader:
                 self._data = list(yaml.safe_load_all(f))  # load后是个generator，用list组织成列表
         return self._data
 
+
+
+
+
+
+
+
